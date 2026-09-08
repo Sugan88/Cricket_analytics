@@ -107,11 +107,11 @@ if __name__ == "__main__":
         .set_index("venue_clean")[["innings", "runs", "average", "strike_rate"]]
     )
 
-        # add as section 5 in batting_conditions.py
-    print("\n=== 5. Away Test batting by host venue (min 6 innings) ===")
+       
+    print("\n=== 5. Away Test batting by host country ===")
     away_tests = tests[~tests["is_home"]]
     print(
-    batting_summary(away_tests, ["venue_clean"], min_balls=800, min_innings=6)
-    .sort_values("average")
-    .set_index("venue_clean")[["innings", "runs", "average", "strike_rate"]]
-)
+        batting_summary(away_tests, ["host_country"], min_balls=1000, min_innings=5)
+        .sort_values("average")
+        .set_index("host_country")[["innings", "runs", "average", "strike_rate"]]
+    )
