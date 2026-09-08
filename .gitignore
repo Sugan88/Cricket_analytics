@@ -1,0 +1,7 @@
+
+# Cricsheet data — fetched via data/processors/cricsheet_loader.py
+data/raw/
+data/processed/
+*.json
+*.parquet
+*.zip
