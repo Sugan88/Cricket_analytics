@@ -5,3 +5,5 @@ data/processed/
 *.json
 *.parquet
 *.zip
+!reports/figures/
+.DS_Store
